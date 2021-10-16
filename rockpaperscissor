@@ -1,0 +1,19 @@
+import random
+while True:
+    def computer():
+        compchoice = ['r' , 'p', 's']
+        comp = random.choice(compchoice)
+        return comp
+
+    comput = computer()
+
+    userchoice =input('r for rock , s for scissor , p for paper : ')
+    print('computer chose: ', comput)
+    if (userchoice=='r' and comput=='s') or (userchoice=='p' and comput=='r') or (userchoice=='s' and comput=='p'):
+        print('you won')
+    elif (userchoice=='r' and comput=='p') or (userchoice=='p' and comput=='s') or (userchoice=='s' and comput=='r'):
+        print('you lost')
+    elif (userchoice=='r' and comput=='r') or (userchoice=='p' and comput=='p') or (userchoice=='s' and comput=='s'):
+        print('it is a tie')
+    else:
+        print('please choose from the given options')
